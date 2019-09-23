@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+    amitc-dev-server:
+        ports:
+            - 8080:8080
+            - 8081-8300:8081-8300
+        container_name: code-server
+        volumes:
+            - '/var/run/docker.sock:/var/run/docker.sock'
+            - '/Users/andreasmaier/Documents/Development/springeureka:/home/coder/project'
+        image: amitc-dev-server
